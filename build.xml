@@ -1,13 +1,13 @@
 <?xml version = "1.0"?>
 <project name= "milanlopez_x_pp1" default="usage" basedir="/home/emilanlopez/milanlopez_x_pp1">
 
-	<property file = "build.properties"/>
+        <property file = "build.properties"/>
 
                 <property name ="build.dir" value ="milanlopez_x_pp1"/>
                 <property name = "src.dir" value = "milanlopez_x_pp1"/>
 
 
-	<path id = "master-classpath">
+        <path id = "master-classpath">
                 <fileset dir = "${src.dir}">
                         <include name = "*.jar"/>
                 </fileset>
@@ -15,41 +15,41 @@
                 <pathelement path = "${build.dir}"/>
         </path>
 
-	<target name="usage">
+        <target name="usage">
 
-		<echo>Java Program that will use regular expressions to find specific patterns in a Linux authorization log file.</echo>
-
-	</target>
-
-        <target name="build">
-	
-		<echo>Compiles all of the java source files .java-->.class</echo>
-
-		<javac includeantruntime="false" 
-					srcdir="." destdir="." />
-
-	</target>
-
-	<target name="clean">
-		
-                <echo>Clean all of the .class files. </echo>
-		<delete>
-        		 <fileset dir=".">
-           			 <include name = "**/*.class"/>
-        		 </fileset>
-     		 </delete>
-    
-	</target>
-
-        <target name="run">
-           
-                <echo>Run the java application</echo>
-		<java classname="Application">
-               		<arg value="auth.txt" />
-               		<arg value="2"/>
-		</java>
+                <echo>Java Program that will use regular expressions to find specific patterns in a Linux authorization log file.</echo>
 
         </target>
-	
+
+        <target name="build">
+
+                <echo>Compiles all of the java source files .java-->.class</echo>
+
+                <javac includeantruntime="false"
+                                        srcdir="." destdir="." />
+
+        </target>
+
+        <target name="clean">
+
+                <echo>Clean all of the .class files. </echo>
+                <delete>
+                         <fileset dir=".">
+                                 <include name = "**/*.class"/>
+                         </fileset>
+                </delete>
+
+        </target>
+
+        <target name="run">
+
+                <echo>Run the java application</echo>
+                <java classname="Application">
+                        <arg value="auth.txt" />
+                        <arg value="2"/>
+                </java>
+
+        </target>
+
 
 </project>
