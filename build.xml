@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+<project name= "Programming Project One" default="usage" basedir="/home/emilanlopez/javacode">
+	
+	<target name="usage">
+
+		<echo>Returns this message.</echo>
+
+	</target>
+
+        <target name="build">
+	
+		<echo>Compiles all of the java source files .java-->.class</echo>
+
+	</target>
+
+	<target name="clean">
+		
+                <echo>Compiling the .java source files</echo>
+  
+	</target>
+
+        <target name="run">
+           
+                <echo>Run the java application</echo>
+
+        </target>
+	
+
+</project>
