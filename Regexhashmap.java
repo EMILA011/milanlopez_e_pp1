@@ -1,5 +1,5 @@
 /**
- *
+ *This class checks for pattern matching for ipv4 addressess and usernames using regular expresions using a given log file. 
  *@author Elena Milan Lopez
  *@version 1.0
  *Programming Project One 
@@ -14,9 +14,12 @@ public class Regexhashmap{
     public static HashMap<String,Integer> hmIpv4;
     public static HashMap<String,Integer> hmUsername;
         
+
     /*
-    
+    This is a constructor for the class Regexhashmap.
+    It initialize the hashmaps that contain the ipv4addresses and usernames respectively.
     */
+
     public Regexhashmap() {
         hmIpv4 = new HashMap<>();
         hmUsername = new HashMap<>();
@@ -24,7 +27,9 @@ public class Regexhashmap{
     }//constructor
     
     /*
-
+	This method analize the given line to check if it contains the specific ipv4pattern.
+	It creates an array of Strings per each word .
+	If the pattern is found, it is added to the  Hashmap countainig the ipv4 addresses and the number of times each address appear in the file.
      */
      public static void analyzeIpv4(String line){
 
@@ -42,6 +47,10 @@ public class Regexhashmap{
     }//analyzeIpv4
 
     /*
+	This method analize the given line to check if it contains the specific username pattern.
+        It creates an array of Strings per each word .
+	If the string user is found, then it adds the following word to the Hashmap(which should follow the given pattern). 
+        The  Hashmap countains the usernames  and the number of times each username appear in the file.
 
     */
     public static void analyzeUsernames(String line){
@@ -62,7 +71,7 @@ public class Regexhashmap{
     }//analyzeUsernames
 
     /*
-
+	This method prints the content of the ipv4 Hashmap.
     */
     public static void outputIpv4()
     {
@@ -72,7 +81,7 @@ public class Regexhashmap{
     }//outputIpv4
 
     /*
-
+	This method prints the content of the usernames Hashmap.
     */
     public static void outputUsername(){
 
@@ -82,7 +91,7 @@ public class Regexhashmap{
     }//outputUsername
 
     /*
-
+	This method returns the size of the ipv4 Hashmap.
     */
     public static int sizeHmIpv4(){
 
@@ -91,7 +100,7 @@ public class Regexhashmap{
     }//sizeHmIpv4
 
     /*
-
+	This method returns the size of the usernames Hashmap.
     */
     public static int sizeHmUsername(){
 
